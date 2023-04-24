@@ -1,0 +1,38 @@
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+/*parametros de rect:
+    mover del margen izquierdo
+    mover del margen arriba
+    width
+    height
+*/
+ctx.beginPath();
+ctx.rect(20, 10, 150, 150);
+ctx.fillStyle = "#b3b3b3";
+ctx.fill();
+ctx.closePath();
+/*parametros de arc:
+    mover del margen izquierdo
+    mover del margen arriba
+    radio
+    donde empieza
+    donde acaba
+    direccion -> opcional
+*/
+ctx.beginPath();
+ctx.arc(300, 100, 80, 0, Math.PI * 2,false);
+ctx.fillStyle = "blue";
+ctx.fill();
+ctx.closePath();
+
+/*parametros de clearRect:
+     coordenadas x e y de la esquina superior izquierda de un rectángulo y las coordenadas x e y de la esquina inferior derecha de un rectángulo. En todo el área definida por ese rectángulo se borrará cualquier cosa que se haya pintado antes.
+    
+*/
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+para trabajar con canvas -> 
+    si vas a utilizar el eje horizontal (d,i)
+      -> usas las x
+    si vas a utilizar el eje vertical (a,a)
+      -> usas las y
